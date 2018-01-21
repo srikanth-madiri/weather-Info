@@ -1,0 +1,241 @@
+a:link,
+a:visited {
+    color: BLACK;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14pt;
+}
+
+
+/* Title Font */
+
+h1 {
+    font-family: 'GilroyBold', 'Montserrat', serif !important;
+    font-size: 14vmin !important;
+}
+
+
+/* Tagline */
+
+h2 {
+    font-family: 'MoonLight', 'Open Sans', sans-serif !important;
+    font-size: 25pt !important;
+}
+
+
+/* Section Titles */
+
+h3 {
+    font-family: 'MoonBold', 'Open Sans', sans-serif !important;
+    font-size: 20pt !important;
+}
+
+h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15pt;
+}
+
+li {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14pt;
+}
+
+body {
+    padding-top: 50px;
+}
+
+
+/* Custom fonts */
+
+@font-face {
+    font-family: GilroyBold;
+    src: url('assets/fonts/Gilroy-ExtraBold.otf');
+}
+
+@font-face {
+    font-family: GilroyLight;
+    src: url('assets/fonts/Gilroy-Light.otf');
+}
+
+@font-face {
+    font-family: MoonBold;
+    src: url('assets/fonts/Moon-Bold.otf');
+}
+
+@font-face {
+    font-family: MoonLight;
+    src: url('assets/fonts/Moon-Light.otf');
+}
+
+.navName {
+    font-family: 'MoonBold', 'Open Sans', sans-serif;
+    font-size: 20pt;
+    color: black;
+}
+
+.headerfooter {
+    background: black;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, black, black);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, black, black);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.vertical-center {
+    height: 100vh;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    min-height: 100%;
+    /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh;
+    /* These two lines are counted as one :-)       */
+    /* Centers the jumbotron text */
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 700px) {
+    .center {
+        margin-left: 10%;
+    }
+}
+
+
+/* Navigation Settings */
+
+.navbar-default {
+    background-color: white !important;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #FFF;
+}
+
+
+/* Nagivation Link Color */
+
+.navbar-default .navbar-nav>li>a {
+    color: black !important;
+}
+
+
+/* Nav Link Hover Color */
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+    background-color: #005C97 !important;
+    color: white !important;
+}
+
+.navbar-default .navbar-text {
+    color: black;
+}
+
+
+/* Responsive Button Border */
+
+.navbar-default .navbar-toggle {
+    border-color: black;
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+
+/* Responsive Button Background */
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: white;
+}
+
+
+/* Responsive Button Icon-color */
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: black;
+}
+
+
+/* Divider Settings */
+
+.hr,
+.contact-icon {
+    color: white;
+    margin-top: 40px;
+}
+
+.padding {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+
+/* First Block */
+
+.about {
+    background-color: white;
+    color: black;
+    margin: 15px !important;
+}
+
+
+/* image resizing*/
+
+.img {
+    border-radius: 150px;
+}
+
+
+/* Second Block */
+
+.skills {
+    color: #f5f5f0;
+    font-family: 'Open Sans';
+    background-color: black;
+    display: flex;
+    align-items: center;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+
+/* Third Block */
+
+.projects {
+    background-color: white;
+    color: black;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+}
+
+
+/* Last Block */
+
+.contact {
+    background-color: black;
+    color: white;
+}
+
+.footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: white;
+    font-family: 'MoonLight';
+}
+
+.img-responsives {
+    max-width: 60%;
+    max-height: 60%;
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+    .img-responsives {
+        width: 35%;
+        height: auto;
+    }
+}

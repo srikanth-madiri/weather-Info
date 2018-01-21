@@ -1,0 +1,282 @@
+<!doctype>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Weather-Info</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" class="favicon" href="images/favicon.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="style.css">
+
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-91312617-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+
+
+
+
+</head>
+
+<style>
+    .bgimg-2 {
+        background-image: url("images/back1.jpeg");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 400px;
+    }
+    
+    .display-container {
+        position: relative;
+    }
+    
+    .opacity-min {
+        opacity: 0.75
+    }
+</style>
+
+
+<!-- Backup Font if custom one fails -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat" rel="stylesheet" type="text/css">
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="av_bar">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="index.html" class="navbar-brand navbar-link nav_brand"><img src="images/wea.png" class="img-responsive" id="logo" alt=""><b id="main">Weather Forecast</b></a>
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+            </div>
+
+            <div class="collapse navbar-collapse" style="font-family: sans-serif">
+                <ul class="nav navbar-nav navbar-right" id="nav_list">
+                    <li><a href="index.html"><i class="fa fa-home "></i> Home</a></li>
+                    <li><a href="portfolio.html" target="_blank"><i class="fa fa-user "></i> About</a></li>
+                    <li><a href="current.html">Current</a></li>
+                    <li><a href="forecast.html">Forecast</a></li>
+                    <li><a href="#">Sign Up/Login In</a></li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="row img-responsive" id="headrow">
+        <div class="col-md-12" id="coltext">
+            <h2 class="text-center" id="colheadtext1"></h2>
+            <h1 class="text-center" id="colheadtext2"></h1>
+
+            <ul class="list-inline" id="list_item">
+                <li id="list1"></li>
+                <li id="list2"></li>
+                <li id="list3"></li>
+                <li id="list4"></li>
+            </ul>
+            <h1 class="text-center" id="colheadtext3"></h1>
+
+        </div>
+    </div>
+
+
+    <div id="arrow"><i class="fa fa-angle-double-down" style="font-size: 6vw; text-align: center;width:6vw; border-radius:100px;  color: black; background-color:white ;"></i></div>
+
+
+
+    <div class="container" style="font-family: sans-serif; height: 100%; width:100%; margin-bottom: 0px; margin-top:-12px; background-color:black;">
+        <div class="row">
+            <div class="col-md-12">
+
+                <h2 class="text-center text-primary" style="font-size: 3vw; color:slategray; margin-top: 80px;">Welcome To The Best Weather-Forecast Website</h2>
+                <hr / style='width:80%; padding-top:70px;'>
+                <center><i style="color:red; font-size:10vw; " class="fa fa-heart margin-bottom "></i></center>
+                <p class="text-center" id="welcomepara">Here's the best website for users to search for the cities they could wish all around world to get the current weather and also the weather forecast </p>
+            </div>
+        </div>
+    </div>
+    <div class="bgimg-2 display-container opacity-min">
+        <div class="display-middle">
+        </div>
+    </div>
+
+
+    <div class="container" style="font-family: sans-serif;margin-top: 100px;margin-bottom: 40px;">
+        <a href="portfolio.html" target="_blank">
+            <div class="row" id="rowdiv">
+
+                <div class="col-md-3" id="coldes">
+                    <div class="info-icon"><i class="fa fa-sun-o"></i></div>
+                    <h3 class="text-center">About Developer</h3>
+                    <hr / style='width:80%;margin-top:-10px;color:black;'>
+                    <p class="text-center" style="font-size:20px;">Know More About The Developer Come On <b><i>FIRE Me!!!!</i></b> </p>
+                </div>
+
+        </a>
+        <a href="current.html">
+            <div class="col-md-3" id="coldes">
+                <div class="info-icon"><i class="fa fa-search"></i></div>
+                <h3 class="text-center">Current Weather</h3>
+                <hr / style='width:80%;margin-top:-10px;color:black;'>
+                <p class="text-center" style="text-decoration: none;font-size:20px;">Search for current weather Information and forecast</p>
+            </div>
+        </a>
+        <a href="forecast.html">
+            <div class="col-md-3" id="coldes">
+                <div class="info-icon"><i class="fa fa-chevron-circle-right"></i></div>
+                <h3 class="text-center">Weather Forecast</h3>
+		<div>
+                <hr / style='width:80%;margin-top:-10px; color:black;'>
+                <p class="text-center" style="text-decoration: none;font-size:20px;">Get forecast info temp,pressure,humidity, etc..</p>
+            	</div>
+            </div>
+        </a>
+        </div>
+    </div>
+
+
+
+    <!-- Contact -->
+    <div class="contact padding" id="contact">
+        <div class="container">
+            <center><b><h3>Contact Me</h3></b></center>
+            <hr>
+            <div class="row">
+                <center>
+                    <div class="col-md-3 col-sm-3 col-xs-6">
+                        <a href="mailto:madhirinani@gmail.com" target="blank">
+                            <i class="contact-icon fa fa-envelope fa-5x"></i>
+                        </a>
+                        <br>
+                    </div>
+
+                    <div class="col-md-3 col-sm-3 col-xs-6">
+                        <a href="https://github.com/srikanth-madiri" target="blank">
+                            <i class="contact-icon fa fa-github fa-5x"></i>
+                        </a>
+                        <br>
+                    </div>
+
+                    <div class="col-md-3 col-sm-3 col-xs-6">
+                        <a href="https://www.linkedin.com/in/srikanth-madiri-4417a713b/" target="blank">
+                            <i class="contact-icon fa fa-linkedin fa-5x"></i>
+                        </a>
+                        <br>
+                    </div>
+
+                    <div class="col-md-3 col-sm-3 col-xs-6">
+                        <a href="https://www.facebook.com/srikanth.madiri.3" target="blank">
+                            <i class="contact-icon fa fa-facebook fa-5x"></i>
+                        </a>
+                        <br>
+                    </div>
+            
+                </center>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <center>
+            <p style="font-family: sans-serif">© 2017 by Srikanth Madiri</p>
+        </center>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="typed.js"></script>
+
+
+
+    <script>
+        $(document).ready(function() {
+            setTimeout(function() {
+                $("#colheadtext1").typed({
+                    strings: ["The Best Place To Find Weather-Info"],
+                    typeSpeed: 50
+                })
+            }, 0);
+
+            setTimeout(function() {
+                $("#colheadtext2").typed({
+                    strings: ["Current Weather | Weather-Forecast "],
+                    typeSpeed: 50
+                })
+
+            }, 2000);
+
+            setTimeout(function() {
+                $("#list1").typed({
+                    strings: ["Temperature"],
+                    typeSpeed: 50
+                })
+
+            }, 3000);
+
+            setTimeout(function() {
+                $("#list2").typed({
+                    strings: ["Pressure"],
+                    typeSpeed: 50
+                })
+
+            }, 4000);
+
+            setTimeout(function() {
+                $("#list3").typed({
+                    strings: ["Wind Speed"],
+                    typeSpeed: 50
+                })
+
+            }, 5000);
+
+            setTimeout(function() {
+                $("#list4").typed({
+                    strings: ["Humidity"],
+                    typeSpeed: 50
+                })
+
+            }, 6000);
+
+            setTimeout(function() {
+                $("#colheadtext3").typed({
+                    strings: ["Let's Get Started"],
+                    typeSpeed: 50
+                })
+
+            }, 7000);
+        });
+    </script>
+</body>
+
+
+
+</html>

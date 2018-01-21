@@ -1,0 +1,311 @@
+    .favicon {
+        border-radius: 20px;
+    }
+    
+    body {
+        font-family: 'Tangerin', serif;
+        background-color: #ffffff;
+        font-size: 20px;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    #nav_bar {
+        margin-bottom: 0px;
+        padding: 0px;
+        background-color: white;
+        border: none;
+    }
+    
+    .nav_brand {
+        color: whitesmoke !important;
+        font-size: 25px;
+        font-weight: 600;
+    }
+    
+    #nav_list>li>a {
+        font-family: sans-serif;
+        color: whitesmoke;
+        font-weight: 500;
+    }
+    
+    .nav_brand:hover {
+        font-family: sans-serif;
+        color: gray !important;
+        font-size: 25px;
+        font-weight: 600;
+    }
+    
+    #nav_list>li>a:hover {
+        font-family: sans-serif;
+        background-color: #FFFFFF !important;
+        color: #000000 !important;
+        font-weight: 500;
+    }
+    
+    #main {
+        font-size: 1.8vw;
+	font-family: sans-serif;
+    }
+    
+    #logo {
+        max-height: 42px;
+        margin-right: 8px;
+        margin-top: -12px;
+        display: inline-block;
+        border-radius: 20px;
+    }
+    
+    #button1 {
+        margin-top: 8px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+    
+    #button2 {
+        margin-top: 8px;
+        margin-right: -60px;
+        margin-left: 10px;
+    }
+    
+    #headrow {
+        background: url(images/demo.jpeg) no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 98vh;
+        margin: 0px;
+    }
+    
+    #colheadtext1 {
+        color: black;
+        padding-top: 20px;
+        font-size: 3vw;
+	font-family: sans-serif;
+        margin-top: 100px;
+        text-shadow: 2px 2px white;
+    }
+    
+    #colheadtext2 {
+        color: white;
+        font-size: 3vw;
+        padding-top: 10px;
+	font-family: sans-serif;
+        padding-bottom: 10px;
+        text-shadow: 2px 2px black;
+    }
+    
+    #colheadtext3 {
+        font-size: 3vw;
+        color: black;
+        margin-top: 50px;
+	font-family: sans-serif;
+        padding-bottom: 0px;
+        text-shadow: 1px 1px white;
+    }
+    
+    #arrow {
+        text-align: center;
+        margin-top: -65px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    ul#list_item {
+        color: black;
+        text-align: center;
+        font-size: 3vw;
+	font-family: sans-serif;
+        text-shadow: 1px 1px white;
+    }
+    
+    #citydiv {
+        width: 100%;
+        text-align: center;
+        margin: auto;
+    }
+    
+    #city {
+        width: 30vw;
+        margin-top: 20px;
+        align-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #days {
+        width: 30vw;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #submitcurrent {
+        margin-top: 20px;
+    }
+    
+    #submitforecast {
+        margin-top: 20px;
+    }
+    
+    #submitcity {
+        height: 40px;
+    }
+    
+    #error {
+        font-size: 2vw;
+    }
+    
+    #errorcity {
+        width: 50%;
+        margin: auto;
+        text-align: center;
+    }
+    
+    #showweather {
+        width: 60%;
+        margin: auto;
+        background-color: black;
+        border: 1px solid white;
+        color: white;
+        border-radius: 20px;
+        opacity: 0.7;
+    }
+    
+    table {
+        background-color: slategray;
+        font-family: Helvetical, Arial, sans-serif;
+        opacity: 0.7;
+    }
+    
+    th {
+        background: slategray;
+        font-weight: bold;
+        font-size: 18px;
+        color: white;
+    }
+    
+    tbody {
+        background-color: slategray;
+    }
+    
+    td {
+        background: #FAFAFA;
+        text-align: center;
+        font-size: 18px;
+    }
+    
+    #welcomepara {
+        color: white;
+        font-size: 2vw;
+        font-weight: normal;
+        padding: 110px 25px 40px 25px;
+        letter-spacing: 2px;
+    }
+    
+    #rowdiv {
+        margin: auto;
+        margin-bottom: 180px;
+        width: 100%;
+    }
+    
+    #coldes h3 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+    
+    #coldes {
+        border: 2px solid #e7e7e7;
+        border-radius: 20px;
+        margin: 20px 40px;
+        height: auto;
+    }
+    
+    #coldes:hover {
+        border: 2px solid #e7e7e7;
+        border-radius: 20px;
+        margin: 20px 40px;
+        height: auto;
+        box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+        background-color: #F1F1F1;
+        color: black;
+    }
+    
+    .info-icon {
+        text-align: center;
+    }
+    
+    .info-icon i {
+        font-size: 50px;
+        margin-top: 10px;
+        color: #4aa1f3;
+    }
+    
+    .typed-cursor {
+        opacity: 0;
+        -webkit-animation: blink 0.7s infinite;
+        -moz-animation: blink 0.7s infinite;
+        animation: blink 0.7s infinite;
+    }
+    
+    @keyframes blink {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    
+    @-webkit-keyframes blink {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    @-moz-keyframes blink {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    .contact-icon {
+        color: white;
+        margin-top: 40px;
+    }
+    
+    .padding {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    
+    .contact {
+        background-color: black;
+        color: white;
+    }
+    
+    .footer {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        color: white;
+        background-color: black;
+        font-family: 'MoonLight';
+    }

@@ -1,0 +1,229 @@
+<!doctype>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Forecast-Weather</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" class="favicon" href="images/favicon.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="style.css">
+
+
+
+
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-91312617-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+
+
+</head>
+
+
+<!-- Backup Font if custom one fails -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat" rel="stylesheet" type="text/css">
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="av_bar">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="index.html" class="navbar-brand navbar-link nav_brand"><img src="images/wea.png" class="img-responsive" id="logo" alt=""><b id="main">Weather Forecast</b></a>
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+            </div>
+
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right" id="nav_list">
+                    <li><a href="index.html"><i class="fa fa-home "></i> Home</a></li>
+                    <li><a href="portfolio.html"><i class="fa fa-user "></i> About</a></li>
+                    <li><a href="current.html">Current</a></li>
+                    <li><a href="forecast.html">Forecast</a></li>
+                    <li><a href="#">Sign Up/Login In</a></li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <div style="background: url(images/architect.jpg) no-repeat;background-attachment:fixed; background-position:center; background-size: cover; width:100%;">
+        <div style="margin-bottom: 0px; color: black;">
+            <h2 class="text-center" style="font-size: 4vw;font-family: sans-serif; font-weight: 600; padding-top: 100px">Weather-Forecast</h2>
+        </div>
+
+        <div class="container" style="height: 1650px;">
+            <div class="row" id="citydiv">
+                <!-- <div class="col-md-12" style="margin-bottom:10px;">
+                    <h3 class="text-center text-primary" style="color: black; font-size: 30px;">Enter City Name</h3>
+                </div>
+                -->
+
+
+                <div class="row form-group form-inline" id="citydiv">
+                    <input type="text" name="city" id="city" class="form-control" placeholder="Enter City Here..." />
+                    <input type="text" name="days" id="days" class="form-control " placeholder="No.Of Days (1 to 16)" />
+                    <button id="submitforecast" class="btn btn-primary">Get Weather</button>
+                </div>
+
+                <span id="error" class="text-center"></span>
+
+            </div>
+
+            <div class="row" style="margin-top: 30px;">
+                <table class="table table-bordered">
+                    <div id="header" class="text-center"></div>
+                    <thead>
+                        <tr>
+                            <th>Icon</th>
+                            <th>Weather</th>
+                            <th>Description</th>
+                            <th>Morng-Temp</th>
+                            <th>Night-Temp</th>
+                            <th>Min-Temp</th>
+                            <th>Max-Temp</th>
+                            <th>Pressure</th>
+                            <th>Humidity</th>
+                            <th>Wind-Speed</th>
+                        </tr>
+                    </thead>
+                    <tbody id="forecastweather">
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="footer">
+        <div class="container">
+            <div class="row" style="padding-top: 30px;">
+                <p style="font-size:medium; color: white;" class="text-center">Copyright &copy; Weather-Forecast</p>
+            </div>
+
+        </div>
+    </div>
+-->
+
+
+    <!--   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <div class="footer">
+        <div class="footercontainer" id="fooo">
+            <a href='#'><i class="fa fa-twitch fa-3x fa-fw"></i></a>
+            <a href='#'><i class="fa fa-facebook fa-3x fa-fw"></i></a>
+            <a href='#'><i class="fa fa-twitter fa-3x fa-fw"></i></a>
+            <a href='#'><i class="fa fa-youtube-play fa-3x fa-fw"></i></a>
+            <a href='#'><i class="fa fa-rss fa-3x fa-fw"></i></a>
+            <a href='#'><i class="fa fa-vine fa-3x fa-fw"></i></a>
+            <a href='#'><i class="fa fa-flickr fa-3x fa-fw"></i></a>
+            <a href='#'><i class="fa fa-linkedin fa-3x fa-fw"></i></a>
+        </div>
+        <div class="row text-center" style="padding-top: 30px;">
+            <p style="font-size:3vw; color: white;" class="text-center">Copyright &copy; --Srikanth--2017</p>
+        </div>
+    </div> -->
+
+
+
+    <!-- Contact -->
+    <div class="contact padding" id="contact">
+        <div class="container">
+            <center><b><h3>Contact Me</h3></b></center>
+            <hr>
+            <div class="row">
+                <center>
+                    <div class="col-md-3 col-sm-3 col-xs-6">
+                        <a href="mailto:madhirinani@gmail.com" target="blank">
+                            <i class="contact-icon fa fa-envelope fa-5x"></i>
+                        </a>
+                        <br>
+                    </div>
+
+                    <div class="col-md-3 col-sm-3 col-xs-6">
+                        <a href="https://github.com/srikanth-madiri" target="blank">
+                            <i class="contact-icon fa fa-github fa-5x"></i>
+                        </a>
+                        <br>
+                    </div>
+
+                    <div class="col-md-3 col-sm-3 col-xs-6">
+                        <a href="https://www.linkedin.com/in/srikanth-madiri-4417a713b/" target="blank">
+                            <i class="contact-icon fa fa-linkedin fa-5x"></i>
+                        </a>
+                        <br>
+                    </div>
+
+                    <div class="col-md-3 col-sm-3 col-xs-6">
+                        <a href="https://www.facebook.com/srikanth.madiri.3" target="blank">
+                            <i class="contact-icon fa fa-facebook fa-5x"></i>
+                        </a>
+                        <br>
+                    </div>
+
+                </center>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--Footer-->
+    <!--    <div class="footer header">
+        <div class="container">
+            <center>
+                <footer>
+                    <p>© 2017 by Srikanth Madiri</p>
+                </footer>
+            </center>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+-->
+
+    <div class="footer">
+        <center>
+            <p>© 2017 by Srikanth Madiri</p>
+        </center>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="forecast.js"></script>
+</body>
+
+
+
+</html>
